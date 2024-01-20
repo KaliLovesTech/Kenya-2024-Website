@@ -1,8 +1,10 @@
 /* Global Variables and Root Definitions */
 :root {
-  --primary-color: #009688; /* Example Primary Color */
-  --secondary-color: #ff5722; /* Example Secondary Color */
-  --accent-color: #ffc107; /* Example Accent Color */
+  --background-light: #d8f0d8;
+  --text-dark: #001818;
+  --accent-red: #d81800;
+  --secondary-tan: #bb855d;
+  --secondary-green: #f0f0f0;
 }
 
 /* Base Styles */
@@ -11,7 +13,8 @@ body {
   min-height: 100vh; /* Full height */
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color);
+  background-color: var(--background-light);
+  color: var(--text-dark);
   padding-top: 60px; /* For fixed navbar */
   position: relative;
   padding-bottom: 20px;
@@ -25,14 +28,14 @@ h2 {
 
 p {
   line-height: 1.6;
-  color: var(--accent-color); /* Ensure visibility against background */
+  color: var(--text-dark); /* Ensure visibility against background */
 }
 
 /* Component Specific Styles */
 /* Navigation Bar */
 .navbar {
-  background-color: var(--primary-color);
-  border-bottom: 3px solid var(--secondary-color);
+  background-color: var(--secondary-green);
+  border-bottom: 3px solid var(--accent-red);
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -43,7 +46,7 @@ p {
 
 .navbar-brand,
 .nav-link {
-  color: var(--accent-color);
+  color: var(--text-dark);
 }
 
 .navbar-brand img {
@@ -57,7 +60,7 @@ p {
 }
 
 .nav-link:hover {
-  color: var(--secondary-color);
+  color: var(--accent-red);
 }
 
 .navbar-brand {
@@ -72,23 +75,23 @@ p {
   border-radius: 10px;
   padding: 20px;
   padding-bottom: 20px; /* Enough padding to accommodate the footer text */
-  background: white;
+  background: var(--secondary-green);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: auto;
   margin-right: auto;
 }
 
 .container h1 {
-  color: var(--secondary-color);
+  color: var(--secondary-green);
   text-align: center;
   margin-bottom: 30px;
 }
 
 /* Button */
 .btn-primary {
-  background-color: var(--primary-color);
-  border-color: var(--secondary-color);
-  color: #fff;
+  background-color: var(--secondary-green);
+  border-color: var(--accent-red);
+  color: var(--text-dark);
   margin-top: 5px;
   padding: 10px 30px;
   border-radius: 5px;
@@ -96,15 +99,15 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--primary-color);
+  background-color: var(--accent-red);
+  border-color: var(--text-dark);
 }
 
 /* Images */
 .img-fluid {
   width: 600px;
   height: 500px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Content Box and Image Box Styles */
@@ -122,7 +125,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   padding: 15px;
-  background-color: #fff;
+  background-color: var(--background-light);
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -146,7 +149,7 @@ p {
   margin-bottom: 40px;
   font-size: 36px;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--accent-red);
   width: 100%;
   padding-top: 20px;
 }
