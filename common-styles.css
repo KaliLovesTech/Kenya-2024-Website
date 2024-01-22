@@ -1,203 +1,448 @@
 /* Global Variables and Root Definitions */
 :root {
-  --background-light: #d8f0d8;
-  --text-dark: #001818;
-  --accent-red: #d81800;
-  --secondary-tan: #bb855d;
-  --secondary-green: #f0f0f0;
+    --background-light: #d8f0d8;
+    --text-dark: #001818;
+    --accent-red: #d81800;
+    --secondary-tan: #bb855d;
+    --secondary-green: #f0f0f0;
 }
 
 /* Base Styles */
 body {
-  margin: 0;
-  min-height: 100vh; /* Full height */
-  display: flex;
-  flex-direction: column;
-  background-color: var(--background-light);
-  color: var(--text-dark);
-  padding-top: 60px; /* For fixed navbar */
-  position: relative;
-  padding-bottom: 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    padding-top: 60px;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 h1,
 h2 {
-  font-family: "Arial", sans-serif;
-  margin-bottom: 15px;
+    font-family: "Arial", sans-serif;
+    margin-bottom: 15px;
 }
 
 p {
-  line-height: 1.6;
-  color: var(--text-dark); /* Ensure visibility against background */
+    line-height: 1.6;
+    color: var(--text-dark);
 }
 
-/* Component Specific Styles */
-/* Navigation Bar */
+/* Navigation Bar Styles */
 .navbar {
-  background-color: var(--secondary-green);
-  border-bottom: 3px solid var(--accent-red);
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+    background-color: var(--secondary-green);
+    border-bottom: 3px solid var(--accent-red);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar-brand,
 .nav-link {
-  color: var(--text-dark);
+    color: var(--text-dark);
 }
 
 .navbar-brand img {
-  max-height: 50px;
-  width: auto;
+    max-height: 50px;
 }
 
 .nav-link {
-  margin: 0 100px;
-  transition: color 0.3s;
+    margin: 0 100px;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: var(--accent-red);
+    color: var(--accent-red);
 }
 
-.navbar-brand {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+/* Christmas in Kenya Header Styles */
+.christmas-header {
+    background-color: var(--accent-red); /* Accent red background */
+    text-align: center; /* Center the text */
+    padding: 40px 0; /* Padding for top and bottom */
+    color: white; /* White text color */
 }
 
-/* Main Content */
+.christmas-header h2 {
+    margin: 0; /* Remove default margins */
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Main Content Styles */
 .container {
-  flex: 1; /* Allows container to expand */
-  border-radius: 10px;
-  padding: 20px;
-  padding-bottom: 20px; /* Enough padding to accommodate the footer text */
-  background: var(--secondary-green);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: auto;
-  margin-right: auto;
+    flex: 1;
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--secondary-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container h1 {
-  color: var(--secondary-green);
-  text-align: center;
-  margin-bottom: 30px;
+    color: var(--secondary-green);
+    text-align: center;
 }
 
-/* Button */
+/* Button Styles */
 .btn-primary {
-  background-color: var(--secondary-green);
-  border-color: var(--accent-red);
-  color: var(--text-dark);
-  margin-top: 5px;
-  padding: 10px 30px;
-  border-radius: 5px;
-  transition: background-color 0.3s, border-color 0.3s;
+    background-color: var(--secondary-green);
+    border-color: var(--accent-red);
+    color: var(--text-dark);
+    margin-top: 5px;
+    padding: 10px 30px;
+    border-radius: 5px;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-red);
-  border-color: var(--text-dark);
+    background-color: var(--accent-red);
+    border-color: var(--text-dark);
 }
 
-/* Images */
+/* Image Styles */
 .img-fluid {
-  width: 600px;
-  height: 500px;
-  object-fit: contain;
+    width: 600px;
+    height: 500px;
+    object-fit: contain;
 }
 
 /* Content Box and Image Box Styles */
 .content-box,
 .image-box {
-  height: 450px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
+    height: 450px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .content-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 15px;
-  background-color: var(--background-light);
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--background-light);
 }
 
 .text-content {
-  text-align: center;
-  width: 100%;
-  padding-top: 30px;
+    text-align: center;
+    width: 100%;
 }
 
 .image-box img {
-  height: auto;
-  width: 100%;
-  object-fit: contain;
+    height: auto;
+    width: 100%;
 }
 
 /* Countdown Timer Styles */
 .countdown-timer {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  font-size: 36px;
-  font-weight: bold;
-  color: var(--accent-red);
-  width: 100%;
-  padding-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    color: var(--accent-red);
+    padding-top: 20px;
 }
 
 .timer-days {
-  color: var(--accent-color);
-  margin-right: 5px;
+    color: var(--accent-color);
+}
+
+/* Carousel Styles */
+#photoGallery {
+    max-width: 80%; /* Adjust width as needed */
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px; /* Fixed height for the carousel */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow box effect */
+}
+
+.carousel-item {
+    height: 400px; /* Fixed height for each carousel item */
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure the image covers the carousel */
+    height: 100%; /* Match the height of the carousel item */
+    object-fit: cover; /* Images will cover the entire carousel item area */
+    border-radius: 10px; /* Optional: adds rounded corners to the images */
+}
+
+/* Accordion Styles */
+.accordion-item {
+    margin-top: 20px; /* Spacing between accordion items and carousel box */
+    margin-bottom: 1rem; /* Spacing between accordion items */
+}
+
+.accordion-header {
+    background-color: var(--secondary-green); /* Background color for headers */
+    border-radius: 5px; /* Rounded corners for headers */
+}
+
+.accordion-button {
+    color: var(--text-dark); /* Text color for accordion buttons */
+    font-weight: bold; /* Bold font for headings */
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--accent-red); /* Color for active accordion button */
+    background-color: var(--background-light); /* Background color for expanded header */
+}
+
+.accordion-body {
+    background-color: var(--background-light); /* Background color for content */
+    border-radius: 5px; /* Rounded corners for content */
+    padding: 1rem; /* Padding for content */
+}
+
+/* Styles for Maps Group */
+.maps-group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.map-individual {
+    width: 48%; /* Adjust for spacing */
+    margin-bottom: 20px; /* Spacing between maps and other content */
+}
+
+.map-title {
+    text-align: center;
+    font-weight: bold;
+    color: var(--accent-red);
+}
+
+.map-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow box effect */
+    border-radius: 10px; /* Rounded corners for maps */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    border: none; /* Removes default iframe border */
+}
+
+.airbnb-embed-container {
+    display: flex;
+    justify-content: space-around; /* Better distribution of space */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    margin-top: 1rem;
+}
+
+.airbnb-box {
+    width: calc(40% - 10px); /* Increase width, reduce margin for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px; /* Reduced margin for less space between boxes */
+}
+
+.airbnb-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.airbnb-embed-container iframe {
+    width: 100%; /* Full width of the box */
+    height: auto; /* Adjust height accordingly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.accommodation-budget {
+    margin-top: 20px;
+    background-color: var(--background-light);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.accommodation-budget h3 {
+    text-align: center;
+    color: var(--accent-red);
+    margin-bottom: 15px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.table th {
+    text-align: left;
+}
+
+.table td {
+    text-align: left;
+}
+
+/* Accordion Styles for Activities Section */
+.activities-section .accordion-item {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+}
+
+.activities-section .accordion-header {
+    background-color: var(--secondary-green);
+    border-radius: 5px;
+}
+
+.activities-section .accordion-button {
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+.activities-section .accordion-button:not(.collapsed) {
+    color: var(--accent-red);
+    background-color: var(--background-light);
+}
+
+.activities-section .accordion-body {
+    background-color: var(--background-light);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.activities-section h3 {
+    color: var(--accent-red);
+    margin-top: 15px;
+}
+
+.activities-section a {
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+
+.activities-section p {
+    font-size: 14px;
+}
+
+.activities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.activity-box {
+    flex-basis: calc(33% - 20px); /* Three boxes per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow box effect */
+    padding: 10px; /* Inner padding */
+    text-align: center;
+    margin-bottom: 20px; /* Spacing between rows */
+    border-radius: 10px; /* Rounded corners */
+    background-color: var(--secondary-green); /* Box background color */
+}
+
+.activity-box img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px; /* Optional */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.activity-image {
+    width: 200px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+    border-radius: 10px; /* Optional: adds rounded corners to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
+}
+
+/* Key Information */
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This spreads out the content */
+}
+
+.card-title {
+    font-size: 1.2em; /* Larger title size */
+    margin-bottom: 15px; /* Spacing between title and text */
+}
+
+.card-title i {
+    color: #007bff; /* Icon color */
+    margin-right: 10px; /* Spacing after icon */
+}
+
+.card-text {
+    font-size: 0.9em; /* Smaller text size for details */
+}
+
+.col-md-4 {
+    padding: 10px; /* Adjust as needed */
 }
 
 /* Footer Text Styles */
 .footer-text {
-  color: var(--accent-color);
-  margin-top: 80px; /* Space above the text */
-  font-size: 14px; /* Smaller font size for footer text */
-  text-align: center; /* Center align the text */
+    color: var(--accent-color);
+    margin-top: 100px;
+    text-align: center;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-  .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-brand {
-    position: static;
-    transform: none;
-  }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-brand {
+        position: static;
+    }
 }
 
 @media (max-width: 768px) {
-  .navbar-nav {
-    margin-top: 10px;
-  }
-  .nav-link {
-    margin: 0 10px;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  .container {
-    padding: 10px;
-  }
-  .content-box,
-  .image-box {
-    height: auto;
-  }
+    .navbar-nav {
+        margin-top: 10px;
+    }
+    .nav-link {
+        margin: 0 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .content-box,
+    .image-box {
+        height: auto;
+    }
+    .airbnb-box {
+        flex: 0 0 calc(50% - 20px); /* Larger width on smaller screens */
+    }
+    .airbnb-embed-container iframe {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height accordingly */
+    }
+    .activities-section h3 {
+        font-size: 18px;
+    }
+
+    .activities-section p {
+        font-size: 12px;
+    }
+    .activity-box {
+        flex-basis: calc(50% - 20px); /* Two boxes per row on smaller screens */
+    }
 }
 
 /* Miscellaneous/Utilities */
 .row {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
