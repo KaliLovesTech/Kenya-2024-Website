@@ -61,18 +61,18 @@ p {
     color: var(--accent-red);
 }
 
-/* Christmas in Kenya Header Styles */
+/* Header Styles */
 .christmas-header {
-    background-color: var(--accent-red); /* Accent red background */
-    text-align: center; /* Center the text */
-    padding: 40px 0; /* Padding for top and bottom */
-    color: white; /* White text color */
+    background-color: var(--accent-red);
+    text-align: center;
+    padding: 40px 0;
+    color: white;
 }
 
 .christmas-header h2 {
-    margin: 0; /* Remove default margins */
-    font-size: 36px; /* Adjust font size as needed */
-    font-weight: bold; /* Bold font weight */
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* Main Content Styles */
@@ -82,8 +82,7 @@ p {
     padding: 20px;
     background: var(--secondary-green);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .container h1 {
@@ -106,14 +105,13 @@ p {
     border-color: var(--text-dark);
 }
 
-/* Image Styles */
+/* Image and Box Styles */
 .img-fluid {
     width: 600px;
     height: 500px;
     object-fit: contain;
 }
 
-/* Content Box and Image Box Styles */
 .content-box,
 .image-box {
     height: 450px;
@@ -136,8 +134,9 @@ p {
 }
 
 .image-box img {
+    width: auto;
     height: auto;
-    width: 100%;
+    object-fit: contain;
 }
 
 /* Countdown Timer Styles */
@@ -154,62 +153,67 @@ p {
 
 /* Carousel Styles */
 #photoGallery {
-    max-width: 80%; /* Adjust width as needed */
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px; /* Fixed height for the carousel */
+    max-width: 80%;
+    margin: auto;
+    height: 400px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow box effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-item {
-    height: 400px; /* Fixed height for each carousel item */
+    height: 400px;
 }
 
 .carousel-item img {
-    width: 100%; /* Ensure the image covers the carousel */
-    height: 100%; /* Match the height of the carousel item */
-    object-fit: cover; /* Images will cover the entire carousel item area */
-    border-radius: 10px; /* Optional: adds rounded corners to the images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Accordion Styles */
 .accordion-item {
-    margin-top: 20px; /* Spacing between accordion items and carousel box */
-    margin-bottom: 1rem; /* Spacing between accordion items */
+    margin-top: 20px;
+    margin-bottom: 1rem;
 }
 
 .accordion-header {
-    background-color: var(--secondary-green); /* Background color for headers */
-    border-radius: 5px; /* Rounded corners for headers */
+    background-color: var(--secondary-green);
+    border-radius: 5px;
 }
 
 .accordion-button {
-    color: var(--text-dark); /* Text color for accordion buttons */
-    font-weight: bold; /* Bold font for headings */
+    color: var(--text-dark);
+    font-weight: bold;
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--accent-red); /* Color for active accordion button */
-    background-color: var(--background-light); /* Background color for expanded header */
+    color: var(--accent-red);
+    background-color: var(--background-light);
 }
 
 .accordion-body {
-    background-color: var(--background-light); /* Background color for content */
-    border-radius: 5px; /* Rounded corners for content */
-    padding: 1rem; /* Padding for content */
+    background-color: var(--background-light);
+    border-radius: 5px;
+    padding: 1rem;
 }
 
-/* Styles for Maps Group */
-.maps-group {
+/* Maps and Airbnb Styles */
+.maps-group,
+.airbnb-embed-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
-.map-individual {
-    width: 48%; /* Adjust for spacing */
-    margin-bottom: 20px; /* Spacing between maps and other content */
+.map-individual,
+.airbnb-box {
+    width: calc(40% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px;
 }
 
 .map-title {
@@ -218,30 +222,11 @@ p {
     color: var(--accent-red);
 }
 
-.map-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow box effect */
-    border-radius: 10px; /* Rounded corners for maps */
-}
-
-.map-container iframe {
+.map-container iframe,
+.airbnb-embed-container iframe {
     width: 100%;
-    height: 250px; /* Adjust height as needed */
-    border: none; /* Removes default iframe border */
-}
-
-.airbnb-embed-container {
-    display: flex;
-    justify-content: space-around; /* Better distribution of space */
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    margin-top: 1rem;
-}
-
-.airbnb-box {
-    width: calc(40% - 10px); /* Increase width, reduce margin for spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 5px; /* Reduced margin for less space between boxes */
+    height: 250px;
+    border: none;
 }
 
 .airbnb-box img {
@@ -250,13 +235,7 @@ p {
     object-fit: cover;
 }
 
-.airbnb-embed-container iframe {
-    width: 100%; /* Full width of the box */
-    height: auto; /* Adjust height accordingly */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
+/* Accommodation Budget Styles */
 .accommodation-budget {
     margin-top: 20px;
     background-color: var(--background-light);
@@ -277,39 +256,23 @@ p {
     color: var(--text-dark);
 }
 
-.table th {
-    text-align: left;
-}
-
+.table th,
 .table td {
     text-align: left;
 }
 
-/* Accordion Styles for Activities Section */
-.activities-section .accordion-item {
+/* Activities Section Styles */
+.activities-section .accordion-item,
+.activities-section .accordion-header,
+.activities-section .accordion-button,
+.activities-section .accordion-button:not(.collapsed),
+.activities-section .accordion-body {
     margin-top: 20px;
     margin-bottom: 1rem;
-}
-
-.activities-section .accordion-header {
     background-color: var(--secondary-green);
     border-radius: 5px;
-}
-
-.activities-section .accordion-button {
     color: var(--text-dark);
     font-weight: bold;
-}
-
-.activities-section .accordion-button:not(.collapsed) {
-    color: var(--accent-red);
-    background-color: var(--background-light);
-}
-
-.activities-section .accordion-body {
-    background-color: var(--background-light);
-    border-radius: 5px;
-    padding: 1rem;
 }
 
 .activities-section h3 {
@@ -330,70 +293,79 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Adjust the gap as needed */
+    gap: 20px;
 }
 
 .activity-box {
-    flex-basis: calc(33% - 20px); /* Three boxes per row */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow box effect */
-    padding: 10px; /* Inner padding */
+    flex-basis: calc(33% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
     text-align: center;
-    margin-bottom: 20px; /* Spacing between rows */
-    border-radius: 10px; /* Rounded corners */
-    background-color: var(--secondary-green); /* Box background color */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-green);
 }
 
 .activity-box img {
     width: 100%;
     height: 200px;
-    border-radius: 10px; /* Optional */
-    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .activity-image {
-    width: 200px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height */
-    object-fit: cover; /* This will ensure the image covers the area without stretching */
-    border-radius: 10px; /* Optional: adds rounded corners to the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Key Information */
+/* Key Information Styles */
 .card {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* This spreads out the content */
 }
 
 .card-title {
-    font-size: 1.2em; /* Larger title size */
-    margin-bottom: 15px; /* Spacing between title and text */
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 .card-title i {
-    color: #007bff; /* Icon color */
-    margin-right: 10px; /* Spacing after icon */
+    color: #007bff;
+    margin-right: 10px;
 }
 
 .card-text {
-    font-size: 0.9em; /* Smaller text size for details */
+    font-size: 0.9em;
 }
 
 .col-md-4 {
-    padding: 10px; /* Adjust as needed */
+    padding: 10px;
 }
 
-/* Footer Text Styles */
-.footer-text {
-    color: var(--accent-color);
-    margin-top: 100px;
-    text-align: center;
+/* Itinerary and Plan Your Trip Styles */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 0.9em;
+    border-top: 1px solid #e7e7e7;
 }
 
 /* Responsive Adjustments */
@@ -406,30 +378,38 @@ p {
     }
 }
 
+/* Responsive Adjustments for Smaller Screens (Max Width: 768px) */
 @media (max-width: 768px) {
     .navbar-nav {
         margin-top: 10px;
     }
+
     .nav-link {
         margin: 0 10px;
     }
+
     h1 {
         font-size: 24px;
     }
+
     .container {
         padding: 10px;
     }
+
     .content-box,
     .image-box {
         height: auto;
     }
+
     .airbnb-box {
         flex: 0 0 calc(50% - 20px); /* Larger width on smaller screens */
     }
+
     .airbnb-embed-container iframe {
         width: 100%; /* Full width on smaller screens */
         height: auto; /* Adjust height accordingly */
     }
+
     .activities-section h3 {
         font-size: 18px;
     }
@@ -437,6 +417,7 @@ p {
     .activities-section p {
         font-size: 12px;
     }
+
     .activity-box {
         flex-basis: calc(50% - 20px); /* Two boxes per row on smaller screens */
     }

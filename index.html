@@ -14,10 +14,10 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Excursions</a>
+                    <a class="nav-link" href="#itinerary">Itinerary</a>
                 </li>
             </ul>
             <a class="navbar-brand mx-auto" href="/">
@@ -25,7 +25,7 @@
             </a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Plan Your Trip</a>
+                    <a class="nav-link" href="#essentials list">Plan Your Trip</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="text-content">
                             <p class="invitation-text">We're embarking on an unforgettable adventure to Kenya this December, and we'd love for you to join us!</p>
-                            <a href="#register" class="btn btn-primary">Tell Us You're Coming!</a>
+                            <a href="#contact-section" class="btn btn-primary">Tell Us You're Coming!</a>
                         </div>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
                 </div>
             </div>
 
-            <div class="container mt-4 text-center">
-                <h2>About Our Kenya Adventure</h2>
-                <p>Join us on a journey to the heart of Kenya, where the wild meets luxury. Explore the breathtaking landscapes, vibrant culture, and rich wildlife.</p>
+            <div class="container mt-4 text-center" id="About">
+                <h2>About Our Kenya Christmas Adventure</h2>
+                <p>Join us for a festive journey through Kenya's vibrant culture and stunning landscapes, from the bustling streets of Nairobi to the serene beaches of the coast, exhilarating safaris, and a unique Christmas celebration in Yala.</p>
 
                 <!-- Photo Gallery Carousel -->
                 <div id="photoGallery" class="carousel slide" data-bs-ride="carousel">
@@ -193,7 +193,7 @@
                 </div>
 
                 <!-- Activities Section -->
-                <div class="accordion-item">
+                <div class="accordion-item" id="activities">
                     <h2 class="accordion-header" id="headingActivities">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseActivities" aria-expanded="false" aria-controls="collapseActivities">Example Activities</button>
                     </h2>
@@ -342,11 +342,11 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Budget Travel</h5>
                                             <p class="card-text">
-                                                <strong>Accommodation:</strong> $XXX <br />
-                                                <strong>Meals:</strong> $XXX <br />
-                                                <strong>Transport:</strong> $XXX <br />
-                                                <strong>Activities:</strong> $XXX <br />
-                                                <strong>Total:</strong> $XXX
+                                                <strong>Accommodation:</strong> $500 <br />
+                                                <strong>Meals:</strong> $150 <br />
+                                                <strong>Transport:</strong> $1,200 <br />
+                                                <strong>Activities:</strong> $1,000 <br />
+                                                <strong>Total:</strong> $2850
                                             </p>
                                         </div>
                                     </div>
@@ -358,11 +358,11 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Midrange Travel</h5>
                                             <p class="card-text">
-                                                <strong>Accommodation:</strong> $XXX <br />
-                                                <strong>Meals:</strong> $XXX <br />
-                                                <strong>Transport:</strong> $XXX <br />
-                                                <strong>Activities:</strong> $XXX <br />
-                                                <strong>Total:</strong> $XXX
+                                                <strong>Accommodation:</strong> $700 <br />
+                                                <strong>Meals:</strong> $300 <br />
+                                                <strong>Transport:</strong> $1500 <br />
+                                                <strong>Activities:</strong> $1500 <br />
+                                                <strong>Total:</strong> $4000
                                             </p>
                                         </div>
                                     </div>
@@ -374,17 +374,17 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Luxury Travel</h5>
                                             <p class="card-text">
-                                                <strong>Accommodation:</strong> $XXX <br />
-                                                <strong>Meals:</strong> $XXX <br />
-                                                <strong>Transport:</strong> $XXX <br />
-                                                <strong>Activities:</strong> $XXX <br />
-                                                <strong>Total:</strong> $XXX
+                                                <strong>Accommodation:</strong> $1000 <br />
+                                                <strong>Meals:</strong> $500 <br />
+                                                <strong>Transport:</strong> $2000 <br />
+                                                <strong>Activities:</strong> $2000 <br />
+                                                <strong>Total:</strong> $5500
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Closing the second row -->
+                            <!-- Currency Converter -->
                             <div class="currency-converter">
                                 <h3>Currency Converter (USD to KES)</h3>
                                 <input type="number" id="usdAmount" placeholder="Enter USD" />
@@ -394,25 +394,107 @@
                             <script>
                                 function convertCurrency() {
                                     var usdAmount = document.getElementById("usdAmount").value;
-                                    var exchangeRate = 110; // Example rate: 1 USD = 110 KES
+                                    var exchangeRate = 162; // Example rate: 1 USD = 162 KES
                                     var converted = usdAmount * exchangeRate;
                                     document.getElementById("convertedAmount").innerText = `${usdAmount} USD is approximately ${converted} KES`;
                                 }
                             </script>
+                            <!-- Closing the second row -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Itinerary Section -->
+            <div class="container mt-4" id="itinerary">
+                <h2 class="text-center">Itinerary</h2>
+                <p class="text-center lead">A glimpse into your adventure</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 1: Arrival in Nairobi</h5>
+                                <p class="card-text">Settle into your accommodation and explore the vibrant city.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 2-3: Safari Adventure</h5>
+                                <p class="card-text">Experience the thrill of a safari in the Maasai Mara.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 4: Visit to Yala</h5>
+                                <p class="card-text">Join the Christmas celebrations and cultural experiences in Yala.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional days here -->
+                </div>
+            </div>
+
+            <!-- Plan Your Trip Section -->
+            <div class="container mt-4" id="essentials list">
+                <h2 class="text-center">Plan Your Trip</h2>
+                <p class="text-center lead">Essential information for a smooth journey</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Packing List</h5>
+                                <p class="card-text">What to bring for your Kenyan adventure.</p>
+                                <!-- List items here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Travel Tips</h5>
+                                <p class="card-text">Cultural tips, weather expectations, and more.</p>
+                                <!-- Tips here -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Contact Form -->
-            <div class="contact-form">
-                <h2>Contact Us</h2>
+            <div class="contact-form mt-4" id="contact-section">
+                <h2>Plan Your Kenya Adventure</h2>
+                <p class="lead">Tell us about your dream trip, including the number of travelers, travel dates, and any specific activities you'd like to experience.</p>
                 <form id="contactForm">
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
-                    <textarea placeholder="Your Message"></textarea>
-                    <button type="submit">Send Message</button>
+                    <div class="row">
+                        <div class="col-lg-6 mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" id="travelers" placeholder="Number of Travelers" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="dates" placeholder="Travel Dates (e.g., Dec 1 - Dec 7)" required />
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" id="activities" placeholder="Describe your desired activities and any specific preferences" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                <!-- Footer -->
+                <footer class="text-center bg-light py-3">
+                    <p>&copy; 2024 Kenya Trip Planner. All rights reserved.</p>
+                    <p>Designed by Klovetech</p>
+                </footer>
             </div>
         </div>
 
