@@ -188,7 +188,7 @@ p {
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--accent-red);
+    color: var(--text-dark);
     background-color: var(--background-light);
 }
 
@@ -323,6 +323,7 @@ p {
 
 /* Key Information Styles */
 .card {
+    height: 100%; /* This ensures all cards are of equal height */
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -332,6 +333,7 @@ p {
 .card-body {
     display: flex;
     flex-direction: column;
+    flex-grow: 1; /* This allows the body to fill the space */
 }
 
 .card-title {
@@ -357,6 +359,11 @@ p {
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-weight: bold;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Footer Styles */
