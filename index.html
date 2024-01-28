@@ -28,7 +28,7 @@
                     <a class="nav-link" href="#essentials list">Plan Your Trip</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contact-section">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -384,21 +384,33 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Currency Converter -->
                             <div class="currency-converter">
-                                <h3>Currency Converter (USD to KES)</h3>
-                                <input type="number" id="usdAmount" placeholder="Enter USD" />
+                                <h3>Currency Converter</h3>
+                                <select id="conversionType">
+                                    <option value="USDtoKES">USD to KES</option>
+                                    <option value="KEStoUSD">KES to USD</option>
+                                </select>
+                                <input type="number" id="amount" placeholder="Enter amount" />
                                 <button onclick="convertCurrency()">Convert</button>
                                 <p id="convertedAmount"></p>
                             </div>
                             <script>
                                 function convertCurrency() {
-                                    var usdAmount = document.getElementById("usdAmount").value;
-                                    var exchangeRate = 162; // Example rate: 1 USD = 162 KES
-                                    var converted = usdAmount * exchangeRate;
-                                    document.getElementById("convertedAmount").innerText = `${usdAmount} USD is approximately ${converted} KES`;
+                                    var conversionType = document.getElementById("conversionType").value;
+                                    var amount = document.getElementById("amount").value;
+                                    var converted;
+                                    if (conversionType === "USDtoKES") {
+                                        var exchangeRate = 162; // Example rate: 1 USD = 162 KES
+                                        converted = amount * exchangeRate;
+                                        document.getElementById("convertedAmount").innerText = `${amount} USD is approximately ${converted} KES`;
+                                    } else if (conversionType === "KEStoUSD") {
+                                        var exchangeRate = 0.0062; // Example rate: 1 KES = 0.0062 USD
+                                        converted = amount * exchangeRate;
+                                        document.getElementById("convertedAmount").innerText = `${amount} KES is approximately ${converted.toFixed(2)} USD`;
+                                    }
                                 }
                             </script>
+
                             <!-- Closing the second row -->
                         </div>
                     </div>
@@ -406,11 +418,11 @@
             </div>
             <!-- Itinerary Section -->
             <div class="container mt-4" id="itinerary">
-                <h2 class="text-center">Itinerary</h2>
-                <p class="text-center lead">A glimpse into your adventure</p>
+                <h2 class="text-center">An Example Itinerary</h2>
+                <p class="text-center lead">A glimpse into an adventure</p>
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="https://www.facebook.com/" class="card-link" target="_blank">
+                        <a href="https://youtube.com/shorts/9HC5_4_kHng?si=gHvBMjEjsDizLKcq" class="card-link" target="_blank">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Day 1-2: Arrival in Nairobi</h5>
@@ -420,7 +432,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="https://www.facebook.com/" class="card-link" target="_blank">
+                        <a href="https://youtu.be/OMNEh1SZpHI?si=n8i09hfBf2ZeHsN9" class="card-link" target="_blank">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Day 3-4: Safari Adventure</h5>
@@ -430,7 +442,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="https://www.facebook.com/" class="card-link" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=jrh_2I7zI0Q" class="card-link" target="_blank">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Day 5-7: Mombasa beach</h5>
@@ -442,7 +454,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="https://www.facebook.com/" class="card-link" target="_blank">
+                        <a href="https://www.youtube.com/watch?v=yyA-_nO_Bjg" class="card-link" target="_blank">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Day 8: Nairobi for a Night</h5>
@@ -452,7 +464,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="https://www.facebook.com/" class="card-link" target="_blank">
+                        <a href="https://youtu.be/jlt26BbGhYE?si=hFc6w59RCHmobLCu" class="card-link" target="_blank">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Day 9-13: Yala Visit</h5>
@@ -462,7 +474,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="https://www.facebook.com/" class="card-link" target="_blank">
+                        <a href="#" class="card-link" target="_blank">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Day 14: Departure</h5>
@@ -540,7 +552,7 @@
 
             <!-- Contact Form -->
             <div class="contact-form mt-4" id="contact-section">
-                <h2>Plan Your Kenya Adventure</h2>
+                <h2>Your Kenya Adventure Awaits</h2>
                 <p class="lead">Tell us about your dream trip, including the number of travelers, travel dates, and any specific activities you'd like to experience.</p>
                 <form id="contactForm">
                     <div class="row">
@@ -563,7 +575,7 @@
                     <div class="mb-3">
                         <textarea class="form-control" id="activities" placeholder="Describe your desired activities and any specific preferences" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary contact-form-submit-button">Submit</button>
                 </form>
                 <!-- Footer -->
                 <footer class="text-center bg-light py-3">
